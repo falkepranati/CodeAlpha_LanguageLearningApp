@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaLearn - Language Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 LinguaLearn</h1>
+        <p>Learn English vocabulary, one word at a time!</p>
+    </header>
+
+    <main class="container">
+        <section class="progress-panel">
+            <span>Learning Progress</span>
+            <strong id="progressText">0 / 10 words learned</strong>
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <p class="label">ENGLISH WORD</p>
+            <h2 id="word">Beautiful</h2>
+            <p id="pronunciation">Pronunciation: BYOO-tuh-ful</p>
+
+            <button id="speakBtn" class="secondary">🔊 Listen</button>
+
+            <div id="translation" hidden>
+                <p class="label">MARATHI MEANING</p>
+                <h3 id="meaning">सुंदर</h3>
+            </div>
+
+            <button id="meaningBtn" class="primary">
+                Show Translation
+            </button>
+        </section>
+
+        <div class="navigation">
+            <button id="previousBtn">← Previous</button>
+            <span id="wordCount">Word 1 of 10</span>
+            <button id="nextBtn">Next →</button>
+        </div>
+
+        <section class="quiz">
+            <h2>📝 Quick Quiz</h2>
+            <p id="quizQuestion">What is the meaning of "Beautiful"?</p>
+            <div id="quizOptions" class="options"></div>
+            <p id="quizFeedback" role="status"></p>
+            <button id="nextQuizBtn" class="secondary">Next Question</button>
+        </section>
+
+        <footer>LinguaLearn | CodeAlpha Internship Project</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

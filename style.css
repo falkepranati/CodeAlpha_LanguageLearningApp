@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e8eaf6);
+    color: #263238;
+}
+
+header {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    color: #087f8c;
+    font-size: 32px;
+}
+
+header p {
+    color: #607d8b;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.progress-panel,
+.card,
+.quiz {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px #26323810;
+}
+
+.progress-panel {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+}
+
+.progress {
+    grid-column: 1 / -1;
+    height: 9px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0;
+    background: #12a594;
+    transition: width 0.3s;
+}
+
+.card {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.label {
+    color: #008b8b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card h2 {
+    font-size: 38px;
+    margin: 18px 0 10px;
+    overflow-wrap: anywhere;
+}
+
+#pronunciation {
+    color: #78909c;
+    margin-bottom: 20px;
+}
+
+#translation {
+    margin: 25px 0;
+    padding: 15px;
+    background: #e9f8f5;
+    border-radius: 12px;
+}
+
+#meaning {
+    color: #087f8c;
+    font-size: 28px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 17px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button:hover {
+    filter: brightness(0.94);
+}
+
+.primary {
+    display: block;
+    width: 100%;
+    background: #087f8c;
+    color: white;
+    margin-top: 20px;
+}
+
+.secondary {
+    background: #e0f2f1;
+    color: #087f8c;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.navigation button {
+    background: white;
+    color: #087f8c;
+}
+
+#wordCount {
+    font-size: 13px;
+}
+
+.quiz h2 {
+    margin-top: 0;
+}
+
+#quizQuestion {
+    line-height: 1.5;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.options button {
+    background: #f0f5f8;
+    color: #263238;
+    border: 1px solid #e0e7ed;
+}
+
+.options button:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.options button.correct {
+    background: #d7f5e7;
+    border-color: #1b9c68;
+}
+
+.options button.wrong {
+    background: #ffebee;
+    border-color: #e35d6a;
+}
+
+#quizFeedback {
+    min-height: 20px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #78909c;
+    padding: 20px;
+    font-size: 13px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .progress-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .progress {
+        grid-column: 1;
+    }
+
+    .card h2 {
+        font-size: 30px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation button {
+        padding: 10px;
+    }
+}
